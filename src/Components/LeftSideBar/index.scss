@@ -24,8 +24,8 @@
   }
   .side-bar-item ul {
     padding: 0;
-    >span{
-        padding-left: 10px;
+    > span {
+      padding-left: 10px;
     }
     li {
       display: flex;
@@ -34,7 +34,11 @@
       font-size: 1rem;
       margin: 0.5rem 0;
       padding-left: 1rem;
+      transition: all 0.1s;
       cursor: pointer;
+      * {
+        pointer-events: none;
+      }
       svg {
         font-size: 1.25rem;
       }
@@ -43,9 +47,9 @@
         line-height: 1.25rem;
       }
     }
-    .selected{
-        border-left: 3px solid var(--theme-color);
-        color: var(--theme-color);
+    .selected {
+      border-left: 3px solid var(--theme-color);
+      color: var(--theme-color);
     }
   }
   #menu {
