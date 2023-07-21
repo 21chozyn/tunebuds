@@ -1,12 +1,14 @@
-.left-side-bar {
-  flex-basis: 20%;
-  border-right: 1px solid var(--border-color);
+.container {
   min-height: 100vh;
   padding: 1rem;
-
   display: flex;
   flex-direction: column;
   justify-content: start;
+}
+.left-side-bar {
+  flex-basis: 20%;
+  border-right: 1px solid var(--border-color);
+
   .logo-container {
     display: flex;
     flex-direction: row;

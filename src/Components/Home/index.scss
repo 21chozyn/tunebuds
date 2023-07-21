@@ -1,5 +1,11 @@
-#app{
-    display: flex;
-    flex-direction: row;
-   
+#app {
+  display: flex;
+  flex-direction: row;
+  .middle {
+    flex-basis: auto;
+    .top-part{
+      display: flex;
+      flex-direction: row;
+    }
+  }
 }

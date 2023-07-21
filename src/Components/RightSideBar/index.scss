@@ -1,0 +1,44 @@
+.right-side-bar {
+  flex-basis: 20%;
+  width: 150px;
+  border-left: 1px solid var(--border-color);
+  margin-left: auto;
+  transition: all 0.3s;
+  > svg {
+    color: var(--theme-color);
+    cursor: pointer;
+    padding: 0 0.5rem;
+
+  }
+  #listeners {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    li {
+      margin: 1rem 0;
+      display: flex;
+      align-items: center;
+      .avatar-container {
+        img {
+          border-radius: 50%;
+          width: 2rem;
+          height: 2rem;
+        }
+        .online {
+          position: relative;
+          top: -0.8rem;
+          left: 1.5rem;
+          border-radius: 50%;
+          background-color: var(--theme-color);
+          width: 0.5rem;
+          height: 0.5rem;
+        }
+      }
+
+      span {
+        line-height: 2rem;
+        padding-left: 1rem;
+      }
+    }
+  }
+}
