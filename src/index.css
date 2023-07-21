@@ -2,14 +2,18 @@
   /* variables */
   --theme-color: #f44f2f;
   --border-color: #f7d6cf;
+  --light-mode-color:#213547;
+  --light-mode-bgcolor:#ffffff;
+  --dark-mode-bgcolor:#242424;
+  --dark-mode-color:rgba(255, 255, 255, 0.87);
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: var(--dark-mode-color);
+  background-color: var(--dark-mode-bgcolor);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -22,8 +26,8 @@ body{
 }
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: var(--white-mode-color);
+    background-color: var(--white-mode-bgcolor);
   }
   a:hover {
     color: #747bff;

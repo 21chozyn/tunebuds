@@ -36,8 +36,8 @@ const index = () => {
         />
       )}
       <ul id="listeners">
-        {listeners.map((listener) => (
-          <li>
+        {listeners.map((listener,index) => (
+          <li key={index}>
             <div className="avatar-container">
               <img src={listener.avater} alt="avatar" />
               {listener.isOnline && <div className="online" />}

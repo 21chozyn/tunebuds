@@ -1,2 +1,20 @@
 $theme-color: #f44f2f;
 $border-color:#f7d6cf;
+
+//styling for avatar
+.avatar-container {
+    img {
+      border-radius: 50%;
+      width: 2rem;
+      height: 2rem;
+    }
+    .online {
+      position: relative;
+      top: -0.8rem;
+      left: 1.5rem;
+      border-radius: 50%;
+      background-color: var(--theme-color);
+      width: 0.5rem;
+      height: 0.5rem;
+    }
+  }
