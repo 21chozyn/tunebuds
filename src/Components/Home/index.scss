@@ -3,10 +3,19 @@
   flex-direction: row;
   .middle {
     flex-basis: auto;
+    width: 100%;
     .top-part {
       display: flex;
       flex-direction: row;
+      width: 100%;
       #mode {
+        margin-left: auto;
+        margin-right: 1rem;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items:center ;
+        white-space: nowrap;
         .toggle {
           appearance: none;
           visibility: hidden;
@@ -62,6 +71,7 @@
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
+        align-items: center;
         .user-info{
           height: 100%;
           padding: 0 5px;
