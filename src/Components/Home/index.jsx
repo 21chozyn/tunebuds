@@ -5,9 +5,10 @@ import "./index.scss";
 import LeftSideBar from "../LeftSideBar";
 import RightSideBar from "../RightSideBar";
 import Search from "../Search";
+import PartiesTab from "../PartiesTab";
 
 //picture imports
-import avatar from "../../assets/default-avatar.jpg"
+import avatar from "../../assets/default-avatar.jpg";
 const index = () => {
   const [mode, setMode] = React.useState("dark");
 
@@ -44,6 +45,7 @@ const index = () => {
             </div>
           </div>
         </div>
+        <PartiesTab />
       </div>
       <RightSideBar />
     </div>

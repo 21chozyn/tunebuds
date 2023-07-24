@@ -6,6 +6,8 @@
   --light-mode-bgcolor:#ffffff;
   --dark-mode-bgcolor:#242424;
   --dark-mode-color:rgba(255, 255, 255, 0.87);
+  --tab-dark-color:rgb(25, 24, 24);
+  --tab-dark-color1:rgb(41, 37, 37);
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

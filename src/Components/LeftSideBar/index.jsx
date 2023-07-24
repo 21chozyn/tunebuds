@@ -7,15 +7,18 @@ import logo from "../../assets/logo-small.png";
 import { FaHome, FaClock ,FaHeart, FaHeadphones, FaUserAlt} from "react-icons/fa";
 import {HiCube} from "react-icons/hi";
 import {ImBooks} from "react-icons/im";
+export const removeSibblingClass = (e,classToRemove)=>{
+  const elementSiblings = e.target.parentElement.children
+    for (let i = 0; i < elementSiblings.length; i++) {
+      elementSiblings[i].classList.remove(classToRemove);
+    }
+}
 const index = () => {
 
   const handleClick = (e)=>{
     //this is called when user clicks any li element
     //this function removes the selected classname from all other siblings and gives it to the selected one
-    const elementSiblings = e.target.parentElement.children
-    for (let i = 0; i < elementSiblings.length; i++) {
-      elementSiblings[i].classList.remove('selected');
-    }
+    removeSibblingClass(e,"selected");
     e.target.className="selected"
 
   }
