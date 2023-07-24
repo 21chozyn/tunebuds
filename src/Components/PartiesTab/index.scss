@@ -1,44 +1,51 @@
-#parties-container{
-    display: flex;
-    flex-direction: column;
-    background-color: var(--tab-dark-color);
-    border-radius: 8px;
+#parties-container {
+  display: flex;
+  flex-basis: 86%;
+  flex-direction: column;
+  background-color: var(--tab-dark-color);
+  border-radius: 8px;
+  margin: 1rem;
+  padding: 1rem;
+  h2 {
     margin: 1rem;
-    margin-right: 60px;
-    padding: 1rem;
-    h2
-    {
-        margin: 1rem;
+  }
+  ul {
+    list-style: none;
+    margin: 1rem;
+    padding: 0;
+    li {
+      display: inline-block;
+      // border: 1px solid var(--border-color);
+      padding: 3px;
+      margin: 0.5rem 1rem;
+      margin-left: 0;
+      cursor: pointer;
+      border-top: 3px solid var(--tab-dark-color);
+      transition: all 0.3s;
+      border-radius: 5px;
+      &:hover {
+        background-color: var(--tab-dark-color1);
+      }
     }
-    ul{
-        list-style: none;
-        margin: 1rem;
-        padding: 0;
-        li{
-            display: inline-block;
-           // border: 1px solid var(--border-color);
-            padding: 3px;
-            margin: 0.5rem 1rem;
-            margin-left: 0;
-            cursor: pointer;
-            border-top: 3px solid var(--tab-dark-color);
-            transition: all 0.3s;
-            border-radius: 5px;
-            &:hover{
-                background-color: var(--tab-dark-color1);
-            }
-        }
-        .show{
-            border-top: 3px solid var(--theme-color);
-            background-color: var(--tab-dark-color1);
-            border-radius: 0 0 5px 5px;
-
-        }
+    .show {
+      border-top: 3px solid var(--theme-color);
+      background-color: var(--tab-dark-color1);
+      border-radius: 0 0 5px 5px;
     }
-    .cards-container{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
+  }
+  #cards-container {
+    //display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 300px;
+    height: 700px;
+    transform: rotate(-90deg) translateY(-300px);
+    transform-origin: right top;
+    > div {
+      transform: rotate(90deg) translateX(210px);
+      transform-origin: right top;
+      float: right;
     }
+  }
 }
