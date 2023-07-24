@@ -45,9 +45,10 @@ const index = () => {
             </div>
           </div>
         </div>
-        <PartiesTab />
+        <div className="p-r-container">
+          <PartiesTab /> <RightSideBar />
+        </div>
       </div>
-      <RightSideBar />
     </div>
   );
 };

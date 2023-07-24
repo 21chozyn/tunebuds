@@ -4,6 +4,8 @@
   .middle {
     flex-basis: auto;
     width: 100%;
+    margin: 0;
+    padding-right: 0;
     .top-part {
       display: flex;
       flex-direction: row;
@@ -91,6 +93,11 @@
           }
         }
       }
+    }
+    .p-r-container{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
     }
   }
 }

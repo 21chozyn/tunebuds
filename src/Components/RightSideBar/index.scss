@@ -1,7 +1,7 @@
 .right-side-bar {
-  position: fixed;
+ position: relative;
   right: 0;
-  top:100px;
+  margin-top: 1rem;
   z-index: 1;
   width: 150px;
   border-left: 1px solid var(--border-color);
