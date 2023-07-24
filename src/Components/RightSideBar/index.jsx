@@ -18,8 +18,8 @@ const index = () => {
       className="right-side-bar container"
       style={
         !isExpanded
-          ? { flexBasis: "1%", width: "2rem" }
-          : { flexBasis: "20%", width: "150px" }
+          ? { width: "2rem" }
+          : { width: "200px" }
       }
     >
       {isExpanded ? (
