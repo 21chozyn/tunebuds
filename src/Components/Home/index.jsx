@@ -6,17 +6,24 @@ import LeftSideBar from "../LeftSideBar";
 import RightSideBar from "../RightSideBar";
 import Search from "../Search";
 import PartiesTab from "../PartiesTab";
+import PartyTab from "../PartyTab";
 
 //picture imports
 import avatar from "../../assets/default-avatar.jpg";
+
+//redux
+import { useDispatch, useSelector } from "react-redux";
+
 const index = () => {
   const [mode, setMode] = React.useState("dark");
-
+  const showParties = useSelector((state) => state.ui.partiesTab.show);
   const handleThemeChange = () => {
     const newMode = mode === "dark" ? "light" : "dark";
     setMode(newMode); //this changes the them to the selected choice
     localStorage.setItem("theme", newMode);
   };
+  React.useEffect(()=>{console.log(showParties)},[showParties])
+
   return (
     <div id="app">
       <LeftSideBar />
@@ -31,6 +38,7 @@ const index = () => {
               name="dark"
               value="dark"
               checked={mode === "dark" ? false : true}
+              onChange={()=>{"do something"}}
               onClick={handleThemeChange}
             />
             <span className="check"></span>
@@ -46,7 +54,7 @@ const index = () => {
           </div>
         </div>
         <div className="p-r-container">
-          <PartiesTab />
+          {showParties ? <PartiesTab /> : <PartyTab />}
           <RightSideBar />
         </div>
       </div>
