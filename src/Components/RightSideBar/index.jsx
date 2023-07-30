@@ -18,7 +18,7 @@ const index = () => {
       className="right-side-bar container"
       style={
         !isExpanded
-          ? { width: "2rem" }
+          ? { width: "4rem" }
           : { width: "200px" }
       }
     >

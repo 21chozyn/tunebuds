@@ -46,7 +46,8 @@ const index = () => {
           </div>
         </div>
         <div className="p-r-container">
-          <PartiesTab /> <RightSideBar />
+          <PartiesTab />
+          <RightSideBar />
         </div>
       </div>
     </div>
