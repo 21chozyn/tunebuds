@@ -126,6 +126,14 @@ const hipHopSongs = [
   },
 ];
 const index = () => {
+  const [wrapperHeight, setWrapperHeight] = React.useState("");
+  React.useEffect(() => {
+    //to calculate height of tabble wrapper
+    const tableWrapper = document.getElementById("songs-wrapper");
+    const height =
+      window.innerHeight - tableWrapper.getBoundingClientRect().top;
+    setWrapperHeight(`${height}px`);
+  }, []);
   const data = useSelector((state) => state.ui.partyTab);
   return (
     <div id="party-container">
@@ -156,30 +164,28 @@ const index = () => {
           <div className="btn1">join the party</div>
         </div>
       </figure>
-      <table id="music-list">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Title</th>
-            <th>Artist</th>
-            <th>Album</th>
-            <th>Length</th>
-          </tr>
-        </thead>
-        <tbody>
-          {hipHopSongs.map((song, index) => {
-            return (
-              <tr key={index}>
-                <td>{index + 1}</td>
-                <td>{song.title}</td>
-                <td>{song.artist}</td>
-                <td>{song.album}</td>
-                <td>{song.length}</td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
+      <div id="songs-wrapper" style={{ height: wrapperHeight }}>
+        <div id="header">
+          <h4>#</h4>
+          <h4>Title</h4>
+          <h4>Artist</h4>
+          <h4>Album</h4>
+          <h4>Length</h4>
+        </div>
+
+        {hipHopSongs.map((song, index) => {
+          return (
+            <div key={index} className="song">
+              <span>{index + 1}</span>
+              <span>{song.title}</span>
+              <span>{song.artist}</span>
+              <span>{song.album}</span>
+              <span>{song.length}</span>
+              <div key={index} className="progress-bar" />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
